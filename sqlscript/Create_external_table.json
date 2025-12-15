@@ -1,0 +1,17 @@
+{
+	"name": "Create_external_table",
+	"properties": {
+		"content": {
+			"query": "CREATE DATABASE SCOPED CREDENTIAL credential_name\nWITH IDENTITY = 'identity_name'\n    [ , SECRET = 'secret' ]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "airbnb_DB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
