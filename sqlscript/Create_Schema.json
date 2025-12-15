@@ -1,0 +1,17 @@
+{
+	"name": "Create_Schema",
+	"properties": {
+		"content": {
+			"query": "CREATE SCHEMA gold\n\n/*\nSELECT * FROM OPENROWSET (\n\n    BULK 'https://aairbnbdatalake.dfs.core.windows.net/silver/airbnb/' , FORMAT = 'PARQUET'\n\n) as QUER1 \n*/",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "airbnb_DB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

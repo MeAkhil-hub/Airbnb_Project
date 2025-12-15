@@ -1,0 +1,17 @@
+{
+	"name": "Create_views_Gold",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW gold.airbnb\nAS\nSELECT * FROM \nOPENROWSET (\n    BULK 'https://aairbnbdatalake.dfs.core.windows.net/silver/airbnb/',\n    FORMAT = 'PARQUET'\n) as QUER1\n\nSELECT * FROM gold.airbnb",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "airbnb_DB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
